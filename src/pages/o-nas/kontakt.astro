@@ -1,0 +1,274 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Kontakt" description="Kontaktné údaje Slovenskej asociácie nohejbalu">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact-card h2 {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-card p {
+      line-height: 1.8;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .contact-card strong {
+      color: var(--text);
+      display: inline-block;
+      min-width: 80px;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: var(--primary);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: var(--secondary);
+    }
+
+    .bank-info {
+      background: var(--bg-secondary);
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 30px;
+    }
+
+    .bank-info h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+  </style>
+
+  <div class="page-header">
+    <h1>📞 Kontakt</h1>
+    <p>Kontaktné údaje Slovenskej asociácie nohejbalu</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h2><span>🏢</span> Sídlo asociácie</h2>
+      <p><strong>Názov:</strong><br>Slovenská asociácia nohejbalu</p>
+      <p>
+        <strong>Adresa:</strong><br>
+        Olympijské námestie 14290/2<br>
+        832 80 Bratislava - Nové Mesto<br>
+        Slovenská republika
+      </p>
+      <p><strong>IČO:</strong> 30806887</p>
+      <p><strong>DIČ:</strong> 2021778253</p>
+    </div>
+
+    <div class="contact-card">
+      <h2><span>📧</span> Kontaktné údaje</h2>
+      <p>
+        <strong>Email:</strong><br>
+        <a href="mailto:nohejbal.sna@gmail.com">nohejbal.sna@gmail.com</a>
+      </p>
+      <p>
+        <strong>Telefón:</strong><br>
+        <a href="tel:+421917800004">+421 917 800 004</a>
+      </p>
+      <p>
+        <strong>Web:</strong><br>
+        <a href="https://futnet.sk">www.futnet.sk</a>
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h2><span>👤</span> Vedenie asociácie</h2>
+      <p>
+        <strong>Prezident:</strong><br>
+        Ing. Marián Novák
+      </p>
+      <p>
+        <strong>Výkonný riaditeľ:</strong><br>
+        Mgr. Peter Kováč
+      </p>
+      <p>
+        <strong>Generálny sekretár:</strong><br>
+        Bc. Jana Horváthová
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h2><span>⏰</span> Úradné hodiny</h2>
+      <p>
+        <strong>Pondelok:</strong> 9:00 - 17:00<br>
+        <strong>Utorok:</strong> 9:00 - 17:00<br>
+        <strong>Streda:</strong> 9:00 - 17:00<br>
+        <strong>Štvrtok:</strong> 9:00 - 17:00<br>
+        <strong>Piatok:</strong> 9:00 - 15:00<br>
+        <strong>So - Ne:</strong> Zatvorené
+      </p>
+      <p style="margin-top: 15px; font-size: 14px; color: #999;">
+        * Odporúčame vopred dohodnúť termín stretnutia telefonicky alebo emailom
+      </p>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div style="text-align: center; color: #666;">
+      <div style="font-size: 48px; margin-bottom: 15px;">🗺️</div>
+      <p style="font-size: 18px;">Mapa umiestnenia</p>
+      <p style="font-size: 14px; margin-top: 10px;">
+        Olympijské námestie 14290/2, 832 80 Bratislava
+      </p>
+    </div>
+  </div>
+
+  <div class="bank-info">
+    <h3>💳 Bankové spojenie</h3>
+    <p style="margin-bottom: 10px;">
+      <strong>IBAN:</strong> SK66 0200 0000 0017 8646 0854<br>
+      <strong>Banka:</strong> VÚB, a.s.<br>
+      <strong>SWIFT:</strong> SUBASKBX
+    </p>
+    <p style="color: #666; font-size: 14px; margin-top: 15px;">
+      Účet je určený pre členské príspevky, sponzorské dary a ostatné platby v prospech asociácie.
+    </p>
+  </div>
+
+  <div class="contact-form">
+    <h2 style="font-size: 28px; color: var(--primary); margin-bottom: 25px;">✉️ Kontaktný formulár</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Meno a priezvisko *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefón</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Predmet *</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Správa *</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Odoslať správu</button>
+    </form>
+  </div>
+
+  <div style="background: var(--bg-secondary); padding: 25px; border-radius: 12px; margin-top: 40px;">
+    <h3 style="color: var(--primary); margin-bottom: 15px;">🔗 Sledujte nás na sociálnych sieťach</h3>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+      <a href="https://www.facebook.com/SlovenskaNohejbalovaAsociacia" target="_blank" rel="noopener" 
+         style="display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: #1877f2; color: white; border-radius: 6px; text-decoration: none;">
+        <span style="font-size: 24px;">f</span>
+        <span>Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/nohejbal_sna/" target="_blank" rel="noopener"
+         style="display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; border-radius: 6px; text-decoration: none;">
+        <span style="font-size: 24px;">📷</span>
+        <span>Instagram</span>
+      </a>
+    </div>
+  </div>
+</Layout>

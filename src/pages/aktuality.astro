@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Aktuality" description="Najnovšie správy a novinky zo slovenského nohejbalu">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .news-list {
+      display: grid;
+      gap: 30px;
+    }
+
+    .news-item {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-left: 4px solid var(--primary);
+    }
+
+    .news-meta {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .news-item h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .news-item p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .read-more-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .read-more-btn:hover {
+      background: var(--secondary);
+      color: white;
+    }
+  </style>
+
+  <div class="page-header">
+    <h1>📰 Aktuality</h1>
+    <p>Najnovšie správy a novinky zo slovenského nohejbalu</p>
+  </div>
+
+  <div class="news-list">
+    <article class="news-item">
+      <div class="news-meta">
+        <span>📅 24. január 2026</span>
+        <span>👤 Slovenská asociácia nohejbalu</span>
+      </div>
+      <h2>Konferencia SNA 2026</h2>
+      <p>
+        Slovenská nohejbalová asociácia pozýva všetkých členov, delegátov a priaznivcov 
+        nohejbalu na výročnú konferenciu, ktorá sa uskutoční 24. januára 2026 v Bratislave.
+      </p>
+      <p>
+        Na programe konferencie bude zhodnotenie uplynulého roka, predstavenie plánov 
+        na sezónu 2026, voľba nových členov výkonného výboru a diskusia o rozvoji 
+        nohejbalu na Slovensku.
+      </p>
+      <a href="#" class="read-more-btn">Čítať celý článok</a>
+    </article>
+
+    <article class="news-item">
+      <div class="news-meta">
+        <span>📅 20. december 2025</span>
+        <span>👤 Redakcia</span>
+      </div>
+      <h2>Vianočný turnaj žiakov v Diakovej</h2>
+      <p>
+        Úspešne sa konal tradičný vianočný turnaj mladých nohejbalistov v Diakovej. 
+        Podujatia sa zúčastnilo viac ako 50 športovcov z celého Slovenska.
+      </p>
+      <p>
+        Turnaj bol súčasťou prípravy mládežníckych kategórií na jarnú časť sezóny. 
+        Víťazom sa stal tím z Bratislavy.
+      </p>
+      <a href="#" class="read-more-btn">Čítať celý článok</a>
+    </article>
+
+    <article class="news-item">
+      <div class="news-meta">
+        <span>📅 15. december 2025</span>
+        <span>👤 Redakcia</span>
+      </div>
+      <h2>Prezidentský pohár 2025 - Výsledky</h2>
+      <p>
+        Prezidentský pohár 2025 priniesol vynikajúce zápasy a dramatické finále. 
+        Najlepší slovenskí nohejbalisti sa stretli v Žiline, kde sa uskutočnil 
+        tento prestížny turnaj.
+      </p>
+      <p>
+        Víťazom sa stal tím Slávia Košice, ktorý vo finále porazil Tatran Prešov 
+        výsledkom 3:1. Tretie miesto obsadil TJ Slovan Bratislava.
+      </p>
+      <a href="#" class="read-more-btn">Čítať celý článok</a>
+    </article>
+
+    <article class="news-item">
+      <div class="news-meta">
+        <span>📅 10. december 2025</span>
+        <span>👤 Slovenská asociácia nohejbalu</span>
+      </div>
+      <h2>Nový stan pre Slovenskú asociáciu nohejbalu</h2>
+      <p>
+        Slovenská asociácia nohejbalu získala nový reprezentačný stan, ktorý bude 
+        slúžiť pri organizácii turnajov a iných podujatí. Stan bol zakúpený z dotácie 
+        Ministerstva školstva, vedy, výskumu a športu SR.
+      </p>
+      <p>
+        Tento stan výrazne zlepší podmienky pre organizáciu podujatí a zvýši komfort 
+        pre športovcov a divákov.
+      </p>
+      <a href="#" class="read-more-btn">Čítať celý článok</a>
+    </article>
+
+    <article class="news-item">
+      <div class="news-meta">
+        <span>📅 1. december 2025</span>
+        <span>👤 Redakcia</span>
+      </div>
+      <h2>Majstrovstvá Európy - Nominácia reprezentácie</h2>
+      <p>
+        Tréner slovenskej reprezentácie Marián Novák zverejnil nomináciu na 
+        nadchádzajúce Majstrovstvá Európy, ktoré sa uskutočnia v júni 2026 v Prahe.
+      </p>
+      <p>
+        Do nominácie sa dostalo 12 hráčov, ktorí reprezentovali Slovensko na 
+        medzinárodných turnajoch v uplynulej sezóne. Reprezentácia začne prípravu 
+        na šampionát už v januári 2026.
+      </p>
+      <a href="#" class="read-more-btn">Čítať celý článok</a>
+    </article>
+  </div>
+</Layout>

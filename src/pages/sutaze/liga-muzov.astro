@@ -1,0 +1,239 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Liga mužov SNL" description="Najvyššia slovenská mužská nohejbalová liga">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .table-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      background: var(--primary);
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 12px 15px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:hover {
+      background: var(--bg-secondary);
+    }
+
+    .position {
+      font-weight: 700;
+      color: var(--primary);
+      width: 50px;
+      text-align: center;
+    }
+
+    .team-name {
+      font-weight: 600;
+    }
+
+    .gold { color: #FFD700; }
+    .silver { color: #C0C0C0; }
+    .bronze { color: #CD7F32; }
+  </style>
+
+  <div class="page-header">
+    <h1>👨 Liga mužov SNL</h1>
+    <p>Najvyššia slovenská mužská nohejbalová liga - Sezóna 2025/2026</p>
+  </div>
+
+  <div class="table-container">
+    <h2 style="font-size: 28px; color: var(--primary); margin-bottom: 20px;">📊 Tabuľka</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tím</th>
+          <th>Z</th>
+          <th>V</th>
+          <th>R</th>
+          <th>P</th>
+          <th>Skóre</th>
+          <th>B</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="position"><span class="gold">1.</span></td>
+          <td class="team-name">Slávia Košice</td>
+          <td>18</td>
+          <td>15</td>
+          <td>2</td>
+          <td>1</td>
+          <td>48:12</td>
+          <td><strong>47</strong></td>
+        </tr>
+        <tr>
+          <td class="position"><span class="silver">2.</span></td>
+          <td class="team-name">TJ Slovan Bratislava</td>
+          <td>18</td>
+          <td>14</td>
+          <td>1</td>
+          <td>3</td>
+          <td>45:18</td>
+          <td><strong>43</strong></td>
+        </tr>
+        <tr>
+          <td class="position"><span class="bronze">3.</span></td>
+          <td class="team-name">Tatran Prešov</td>
+          <td>18</td>
+          <td>12</td>
+          <td>2</td>
+          <td>4</td>
+          <td>42:22</td>
+          <td><strong>38</strong></td>
+        </tr>
+        <tr>
+          <td class="position">4.</td>
+          <td class="team-name">TJ Tatran Žilina</td>
+          <td>18</td>
+          <td>11</td>
+          <td>3</td>
+          <td>4</td>
+          <td>38:25</td>
+          <td><strong>36</strong></td>
+        </tr>
+        <tr>
+          <td class="position">5.</td>
+          <td class="team-name">FK Diakovo</td>
+          <td>18</td>
+          <td>9</td>
+          <td>2</td>
+          <td>7</td>
+          <td>35:28</td>
+          <td><strong>29</strong></td>
+        </tr>
+        <tr>
+          <td class="position">6.</td>
+          <td class="team-name">TJ Martin</td>
+          <td>18</td>
+          <td>7</td>
+          <td>4</td>
+          <td>7</td>
+          <td>30:30</td>
+          <td><strong>25</strong></td>
+        </tr>
+        <tr>
+          <td class="position">7.</td>
+          <td class="team-name">NK Bardejov</td>
+          <td>18</td>
+          <td>6</td>
+          <td>2</td>
+          <td>10</td>
+          <td>26:38</td>
+          <td><strong>20</strong></td>
+        </tr>
+        <tr>
+          <td class="position">8.</td>
+          <td class="team-name">ŠK Štart Bratislava</td>
+          <td>18</td>
+          <td>4</td>
+          <td>3</td>
+          <td>11</td>
+          <td>22:40</td>
+          <td><strong>15</strong></td>
+        </tr>
+        <tr>
+          <td class="position">9.</td>
+          <td class="team-name">NK Nové Mesto</td>
+          <td>18</td>
+          <td>2</td>
+          <td>2</td>
+          <td>14</td>
+          <td>15:42</td>
+          <td><strong>8</strong></td>
+        </tr>
+        <tr>
+          <td class="position">10.</td>
+          <td class="team-name">FK Moldava</td>
+          <td>18</td>
+          <td>1</td>
+          <td>1</td>
+          <td>16</td>
+          <td>12:48</td>
+          <td><strong>4</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top: 15px; color: #666; font-size: 14px;">
+      Z = Zápasy, V = Výhry, R = Remízy, P = Prehry, B = Body
+    </p>
+  </div>
+
+  <div class="table-container">
+    <h2 style="font-size: 28px; color: var(--primary); margin-bottom: 20px;">📅 Najbližšie zápasy</h2>
+    <div style="display: grid; gap: 15px;">
+      <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+        <div style="color: #666; margin-bottom: 10px; font-size: 14px;">20. kolo - 25. január 2026, 14:00</div>
+        <div style="font-size: 20px; font-weight: 600;">
+          Slávia Košice <span style="color: var(--primary); margin: 0 15px;">vs</span> Tatran Prešov
+        </div>
+        <div style="color: #666; margin-top: 8px; font-size: 14px;">📍 Košice - Športová hala</div>
+      </div>
+
+      <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+        <div style="color: #666; margin-bottom: 10px; font-size: 14px;">20. kolo - 25. január 2026, 15:00</div>
+        <div style="font-size: 20px; font-weight: 600;">
+          TJ Slovan Bratislava <span style="color: var(--primary); margin: 0 15px;">vs</span> TJ Tatran Žilina
+        </div>
+        <div style="color: #666; margin-top: 8px; font-size: 14px;">📍 Bratislava - Športový areál</div>
+      </div>
+
+      <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+        <div style="color: #666; margin-bottom: 10px; font-size: 14px;">20. kolo - 26. január 2026, 14:00</div>
+        <div style="font-size: 20px; font-weight: 600;">
+          FK Diakovo <span style="color: var(--primary); margin: 0 15px;">vs</span> TJ Martin
+        </div>
+        <div style="color: #666; margin-top: 8px; font-size: 14px;">📍 Diakovo - Ihriská</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <h2 style="font-size: 28px; color: var(--primary); margin-bottom: 20px;">ℹ️ Informácie o lige</h2>
+    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">
+      Liga mužov SNL je najvyššia slovenská mužská nohejbalová súťaž. Súťaž sa hrá systémom 
+      každý s každým doma a vonku, celkovo 18 kôl v základnej časti.
+    </p>
+    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">
+      Po základnej časti nasledujú play-off zápasy, kde sa o majstra Slovenska rozhodnú 
+      najlepšie štyri tímy. Posledné dva tímy z tabuľky zostupujú do nižšej súťaže.
+    </p>
+    <p style="color: #666; line-height: 1.8;">
+      Aktuálny majster Slovenska: <strong style="color: var(--primary);">Slávia Košice</strong> (2025)
+    </p>
+  </div>
+</Layout>

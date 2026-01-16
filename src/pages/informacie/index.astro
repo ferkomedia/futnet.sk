@@ -1,0 +1,155 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Informácie" description="Dôležité informácie a dokumenty Slovenskej asociácie nohejbalu">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-top: 4px solid var(--primary);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .info-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .info-card h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .info-card p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .info-link {
+      display: block;
+      text-align: center;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+
+    .info-link:hover {
+      background: var(--secondary);
+      color: white;
+    }
+  </style>
+
+  <div class="page-header">
+    <h1>ℹ️ Informácie</h1>
+    <p>Dôležité informácie, dokumenty a pravidlá SNA</p>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-icon">👨‍🏫</div>
+      <h2>Tréneri</h2>
+      <p>Zoznam licencovaných trénerov a informácie o trénerských kurzoch a vzdelávacích programoch.</p>
+      <a href="/informacie/treneri" class="info-link">Viac informácií</a>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">📄</div>
+      <h2>Dokumenty</h2>
+      <p>Stanovy, štatúty, predpisy, zápisy a ďalšie dôležité dokumenty Slovenskej asociácie nohejbalu.</p>
+      <a href="/informacie/dokumenty" class="info-link">Stiahnuť dokumenty</a>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">👥</div>
+      <h2>Orgány SNA</h2>
+      <p>Organizačná štruktúra asociácie, výkonný výbor, prezídium a ďalšie riadiace orgány.</p>
+      <a href="/informacie/organy" class="info-link">Zobraziť štruktúru</a>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">👨‍⚖️</div>
+      <h2>Rozhodcovia</h2>
+      <p>Register rozhodcov, vzdelávacie programy, rozhodcovské kurzy a licencie.</p>
+      <a href="/informacie/rozhodcovia" class="info-link">Register rozhodcov</a>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">🏛️</div>
+      <h2>Komisie</h2>
+      <p>Prehľad odborných komisií SNA - súťažná, trénerská, rozhodcovská, mládežnícka a ďalšie.</p>
+      <a href="/informacie/komisie" class="info-link">Zoznam komisií</a>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">📋</div>
+      <h2>Pravidlá</h2>
+      <p>Oficiálne pravidlá nohejbalu, súťažné poriadky a disciplinárne predpisy.</p>
+      <a href="/informacie/pravidla" class="info-link">Pravidlá hry</a>
+    </div>
+  </div>
+
+  <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 40px;">
+    <h2 style="font-size: 28px; color: var(--primary); margin-bottom: 20px; text-align: center;">📢 Dôležité informácie</h2>
+    
+    <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--accent);">
+      <h3 style="color: var(--primary); margin-bottom: 10px;">Členské príspevky 2026</h3>
+      <p style="color: #666; line-height: 1.6;">
+        Členské príspevky na rok 2026 je potrebné uhradiť do 31. januára 2026. 
+        Výška príspevku pre kluby je 150€, pre individuálnych členov 50€.
+      </p>
+    </div>
+
+    <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--primary);">
+      <h3 style="color: var(--primary); margin-bottom: 10px;">Konferencia SNA 2026</h3>
+      <p style="color: #666; line-height: 1.6;">
+        Výročná konferencia Slovenskej asociácie nohejbalu sa uskutoční 24. januára 2026 
+        v Bratislave. Pozývame všetkých delegátov klubov.
+      </p>
+    </div>
+
+    <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;">
+      <h3 style="color: var(--primary); margin-bottom: 10px;">Dotácia z Ministerstva športu</h3>
+      <p style="color: #666; line-height: 1.6;">
+        Slovenská asociácia nohejbalu získala dotáciu zo štátneho rozpočtu na rok 2025 
+        vo výške 46 100€. Ďakujeme Ministerstvu školstva, vedy, výskumu a športu SR.
+      </p>
+    </div>
+  </div>
+</Layout>

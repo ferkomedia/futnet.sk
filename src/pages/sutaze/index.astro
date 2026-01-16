@@ -1,0 +1,144 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Súťaže" description="Prehľad všetkých nohejbalových súťaží na Slovensku">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .competition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .competition-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-top: 4px solid var(--primary);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .competition-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .competition-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .competition-card h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .competition-card p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .competition-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .competition-link:hover {
+      background: var(--secondary);
+      color: white;
+    }
+  </style>
+
+  <div class="page-header">
+    <h1>🏆 Súťaže</h1>
+    <p>Prehľad všetkých nohejbalových súťaží organizovaných SNA</p>
+  </div>
+
+  <div class="competition-grid">
+    <div class="competition-card">
+      <div class="competition-icon">📅</div>
+      <h2>Kalendár akcií</h2>
+      <p>Kompletný prehľad všetkých turnajov, súťaží a podujatí na celý rok.</p>
+      <a href="/sutaze/kalendar" class="competition-link">Zobraziť kalendár</a>
+    </div>
+
+    <div class="competition-card">
+      <div class="competition-icon">👨</div>
+      <h2>Liga mužov SNL</h2>
+      <p>Najvyššia slovenská mužská nohejbalová liga s najlepšími tímami.</p>
+      <a href="/sutaze/liga-muzov" class="competition-link">Tabuľky a výsledky</a>
+    </div>
+
+    <div class="competition-card">
+      <div class="competition-icon">👦</div>
+      <h2>Liga žiakov SNL</h2>
+      <p>Mládežnícka súťaž pre kategóriu žiakov - budúcnosť slovenského nohejbalu.</p>
+      <a href="/sutaze/liga-ziakov" class="competition-link">Tabuľky a výsledky</a>
+    </div>
+
+    <div class="competition-card">
+      <div class="competition-icon">🧑</div>
+      <h2>Liga juniorov SNL</h2>
+      <p>Juniorská liga pre mladých talentovaných nohejbalistov.</p>
+      <a href="/sutaze/liga-juniorov" class="competition-link">Tabuľky a výsledky</a>
+    </div>
+
+    <div class="competition-card">
+      <div class="competition-icon">🌟</div>
+      <h2>Grand Prix SNA</h2>
+      <p>Prestížny turnajový seriál s bodovacím systémom a zaujímavými cenami.</p>
+      <a href="/sutaze/grand-prix" class="competition-link">Viac informácií</a>
+    </div>
+
+    <div class="competition-card">
+      <div class="competition-icon">🥇</div>
+      <h2>Majstrovstvá SR</h2>
+      <p>Majstrovstvá Slovenskej republiky v nohejbale - vrchol domácej sezóny.</p>
+      <a href="/sutaze/majstrovstva-sr" class="competition-link">História a výsledky</a>
+    </div>
+
+    <div class="competition-card">
+      <div class="competition-icon">🗺️</div>
+      <h2>Regionálne ligy</h2>
+      <p>Oblastné súťaže v jednotlivých regiónoch Slovenska.</p>
+      <a href="/sutaze/regionalne-ligy" class="competition-link">Prehľad regiónov</a>
+    </div>
+
+    <div class="competition-card">
+      <div class="competition-icon">🏆</div>
+      <h2>Slovenský pohár</h2>
+      <p>Pohárová súťaž s vyraďovacím systémom pre všetky kategórie.</p>
+      <a href="/sutaze/slovensky-pohar" class="competition-link">Aktuálne kolo</a>
+    </div>
+
+    <div class="competition-card">
+      <div class="competition-icon">⚽</div>
+      <h2>Ostatné súťaže</h2>
+      <p>Ďalšie turnaje, memoriály a priateľské podujatia počas sezóny.</p>
+      <a href="/sutaze/ostatne" class="competition-link">Zobraziť všetky</a>
+    </div>
+  </div>
+</Layout>

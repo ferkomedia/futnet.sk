@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="O nás" description="Informácie o Slovenskej asociácii nohejbalu">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .content-section {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .content-section h2 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+    }
+
+    .content-section p {
+      line-height: 1.8;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .quick-link {
+      background: var(--bg-secondary);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .quick-link:hover {
+      border-color: var(--primary);
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+
+    .quick-link-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .quick-link-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .quick-link-desc {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+  </style>
+
+  <div class="page-header">
+    <h1>👥 O nás</h1>
+    <p>Slovenská asociácia nohejbalu</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Kto sme</h2>
+    <p>
+      <strong>Slovenská asociácia nohejbalu (SNA)</strong> je národná športová organizácia, 
+      ktorá združuje nohejbalové kluby a jednotlivcov na Slovensku. Sme členom Medzinárodnej 
+      federácie futnet (FIFTA) a Európskej únie futnet (UEFS).
+    </p>
+    <p>
+      Našou hlavnou úlohou je rozvoj nohejbalu na Slovensku, organizácia súťaží, 
+      starostlivosť o reprezentáciu a podpora mládežníckeho športu. Spravujeme národné 
+      ligy, pohárové súťaže a zabezpečujeme účasť slovenských športovcov na medzinárodných 
+      podujatiach.
+    </p>
+    <p>
+      Združujeme viac ako 30 klubov a stovky aktívnych hráčov vo všetkých vekových kategóriách. 
+      Naša asociácia sa venuje aj vzdelávaniu trénerov a rozhodcov, organizuje trénerské 
+      a rozhodcovské kurzy a spolupracuje s medzinárodnými organizáciami.
+    </p>
+  </div>
+
+  <div class="content-section">
+    <h2>📊 Naša asociácia v číslach</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Registrovaných klubov</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Aktívnych hráčov</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">150+</div>
+        <div class="stat-label">Zápasov ročne</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Turnajov a podujatí</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>🎯 Naše ciele</h2>
+    <ul style="color: #666; line-height: 2; margin-left: 20px;">
+      <li>Rozvoj nohejbalu na všetkých úrovniach – od mládeže po seniorov</li>
+      <li>Zvyšovanie kvality súťaží a organizácie podujatí</li>
+      <li>Podpora výchovy mladých talentov a mládežníckeho športu</li>
+      <li>Zlepšovanie výsledkov slovenskej reprezentácie na medzinárodnej scéne</li>
+      <li>Vzdelávanie trénerov, rozhodcov a funkcionárov</li>
+      <li>Propagácia nohejbalu medzi širokou verejnosťou</li>
+      <li>Zabezpečenie finančnej stability asociácie a klubov</li>
+      <li>Modernizácia infraštruktúry a tréningových podmienok</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>🏅 Naše hodnoty</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 20px;">
+      <div style="background: var(--bg-secondary); padding: 25px; border-radius: 8px;">
+        <h3 style="color: var(--primary); margin-bottom: 10px;">⚽ Fair Play</h3>
+        <p style="color: #666;">
+          Podporujeme čestné a športové správanie na ihrisku aj mimo neho.
+        </p>
+      </div>
+      <div style="background: var(--bg-secondary); padding: 25px; border-radius: 8px;">
+        <h3 style="color: var(--primary); margin-bottom: 10px;">🤝 Spolupráca</h3>
+        <p style="color: #666;">
+          Budujeme silné partnerstvá s klubmi, sponzormi a medzinárodnými organizáciami.
+        </p>
+      </div>
+      <div style="background: var(--bg-secondary); padding: 25px; border-radius: 8px;">
+        <h3 style="color: var(--primary); margin-bottom: 10px;">📈 Rozvoj</h3>
+        <p style="color: #666;">
+          Neustále zlepšujeme kvalitu športu a zabezpečujeme moderné podmienky.
+        </p>
+      </div>
+      <div style="background: var(--bg-secondary); padding: 25px; border-radius: 8px;">
+        <h3 style="color: var(--primary); margin-bottom: 10px;">👨‍👩‍👧‍👦 Komunita</h3>
+        <p style="color: #666;">
+          Vytvárame priateľskú komunitu, ktorá spája ľudí všetkých vekových kategórií.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>🔗 Ďalšie informácie</h2>
+    <div class="quick-links">
+      <a href="/o-nas/kontakt" class="quick-link">
+        <div class="quick-link-icon">📞</div>
+        <div class="quick-link-title">Kontakt</div>
+        <div class="quick-link-desc">Kontaktné údaje a adresa sídla</div>
+      </a>
+
+      <a href="/o-nas/historia" class="quick-link">
+        <div class="quick-link-icon">📜</div>
+        <div class="quick-link-title">História</div>
+        <div class="quick-link-desc">História slovenského nohejbalu</div>
+      </a>
+
+      <a href="/o-nas/vykonny-vybor" class="quick-link">
+        <div class="quick-link-icon">👥</div>
+        <div class="quick-link-title">Výkonný výbor</div>
+        <div class="quick-link-desc">Členovia výkonného výboru SNA</div>
+      </a>
+
+      <a href="/o-nas/kontrolna-komisia" class="quick-link">
+        <div class="quick-link-icon">✅</div>
+        <div class="quick-link-title">Kontrolná komisia</div>
+        <div class="quick-link-desc">Členovia kontrolnej komisie</div>
+      </a>
+    </div>
+  </div>
+</Layout>

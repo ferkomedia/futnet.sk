@@ -1,0 +1,264 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Domov">
+  <style>
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 60px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      opacity: 0.9;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 10px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .news-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+
+    .news-content {
+      padding: 20px;
+    }
+
+    .news-date {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .news-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .news-excerpt {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .read-more {
+      color: var(--primary);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .quick-link-card {
+      background: var(--bg-secondary);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      border: 2px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .quick-link-card:hover {
+      border-color: var(--primary);
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .quick-link-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .quick-link-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .sponsors {
+      background: var(--bg-secondary);
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin: 60px 0;
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .sponsor-logo {
+      width: 120px;
+      height: 120px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+
+  <div class="hero">
+    <h1>🏐 Futnet Slovensko</h1>
+    <p>Oficiálna stránka Slovenskej asociácie nohejbalu</p>
+  </div>
+
+  <section>
+    <h2 class="section-title">📰 Najnovšie aktuality</h2>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-image">📅</div>
+        <div class="news-content">
+          <div class="news-date">24. január 2026</div>
+          <h3 class="news-title">Konferencia SNA 2026</h3>
+          <p class="news-excerpt">
+            Slovenská nohejbalová asociácia pozýva všetkých členov na výročnú konferenciu, 
+            ktorá sa uskutoční 24. januára 2026.
+          </p>
+          <a href="/aktuality/konferencia-2026" class="read-more">
+            Čítať viac →
+          </a>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-image">🎄</div>
+        <div class="news-content">
+          <div class="news-date">20. december 2025</div>
+          <h3 class="news-title">Vianočný turnaj žiakov</h3>
+          <p class="news-excerpt">
+            Úspešne sa konal vianočný turnaj mladých nohejbalistov v Diakovej. 
+            Zúčastnilo sa viac ako 50 športovcov.
+          </p>
+          <a href="/aktuality/vianocny-turnaj-2025" class="read-more">
+            Čítať viac →
+          </a>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-image">🏆</div>
+        <div class="news-content">
+          <div class="news-date">15. december 2025</div>
+          <h3 class="news-title">Prezidentský pohár 2025</h3>
+          <p class="news-excerpt">
+            Výsledky prestížneho Prezidentského pohára, kde sa stretli najlepší 
+            slovenský nohejbalisti.
+          </p>
+          <a href="/aktuality/prezidentsky-pohar-2025" class="read-more">
+            Čítať viac →
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">⚡ Rýchle odkazy</h2>
+    <div class="quick-links">
+      <a href="/sutaze/liga-muzov" class="quick-link-card">
+        <div class="quick-link-icon">👨</div>
+        <div class="quick-link-title">Liga mužov</div>
+        <p>Aktuálne výsledky a tabuľky</p>
+      </a>
+
+      <a href="/sutaze/liga-juniorov" class="quick-link-card">
+        <div class="quick-link-icon">🧑</div>
+        <div class="quick-link-title">Liga juniorov</div>
+        <p>Mládežnícke súťaže</p>
+      </a>
+
+      <a href="/sutaze/liga-ziakov" class="quick-link-card">
+        <div class="quick-link-icon">👦</div>
+        <div class="quick-link-title">Liga žiakov</div>
+        <p>Nádeje slovenského futnet</p>
+      </a>
+
+      <a href="/sutaze/kalendar" class="quick-link-card">
+        <div class="quick-link-icon">📅</div>
+        <div class="quick-link-title">Kalendár</div>
+        <p>Nadchádzajúce podujatia</p>
+      </a>
+
+      <a href="https://www.futnetworld.com/" target="_blank" class="quick-link-card">
+        <div class="quick-link-icon">🌍</div>
+        <div class="quick-link-title">Futnet World</div>
+        <p>Medzinárodná federácia</p>
+      </a>
+
+      <a href="/reprezentacia" class="quick-link-card">
+        <div class="quick-link-icon">🇸🇰</div>
+        <div class="quick-link-title">Reprezentácia</div>
+        <p>Slovenský národný tím</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="sponsors">
+    <h2 class="section-title">🤝 Za podporu ďakujeme sponzorom</h2>
+    <div class="sponsor-grid">
+      <div class="sponsor-logo">Sponzor 1</div>
+      <div class="sponsor-logo">Sponzor 2</div>
+      <div class="sponsor-logo">Sponzor 3</div>
+      <div class="sponsor-logo">Sponzor 4</div>
+      <div class="sponsor-logo">Ministerstvo školstva</div>
+      <div class="sponsor-logo">Sponzor 6</div>
+    </div>
+  </section>
+</Layout>

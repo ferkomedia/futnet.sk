@@ -1,0 +1,237 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Kluby" description="Nohejbalové kluby registrované v Slovenskej asociácii nohejbalu">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .clubs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .club-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .club-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .club-logo {
+      width: 80px;
+      height: 80px;
+      background: var(--bg-secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 20px;
+    }
+
+    .club-name {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .club-location {
+      text-align: center;
+      color: #666;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .club-info {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .club-info strong {
+      color: var(--text);
+    }
+
+    .region-section {
+      margin-bottom: 60px;
+    }
+
+    .region-title {
+      font-size: 28px;
+      color: var(--secondary);
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+    }
+  </style>
+
+  <div class="page-header">
+    <h1>🏟️ Nohejbalové kluby</h1>
+    <p>Registrované kluby v Slovenskej asociácii nohejbalu</p>
+  </div>
+
+  <div class="region-section">
+    <h2 class="region-title">🏙️ Bratislavský kraj</h2>
+    <div class="clubs-grid">
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">TJ Slovan Bratislava</h3>
+        <div class="club-location">📍 Bratislava</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1921<br>
+          <strong>Tréner:</strong> Ján Novák<br>
+          <strong>Kontakt:</strong> slovan@futnet.sk
+        </div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">ŠK Štart Bratislava</h3>
+        <div class="club-location">📍 Bratislava</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1945<br>
+          <strong>Tréner:</strong> Peter Kováč<br>
+          <strong>Kontakt:</strong> start@futnet.sk
+        </div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">NK Nové Mesto</h3>
+        <div class="club-location">📍 Bratislava - Nové Mesto</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1968<br>
+          <strong>Tréner:</strong> Martin Horváth<br>
+          <strong>Kontakt:</strong> novemesto@futnet.sk
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="region-section">
+    <h2 class="region-title">🏔️ Žilinský kraj</h2>
+    <div class="clubs-grid">
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">TJ Tatran Žilina</h3>
+        <div class="club-location">📍 Žilina</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1950<br>
+          <strong>Tréner:</strong> Jozef Kručay<br>
+          <strong>Kontakt:</strong> tatran@futnet.sk
+        </div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">FK Diakovo</h3>
+        <div class="club-location">📍 Diakovo</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1972<br>
+          <strong>Tréner:</strong> Michal Baláž<br>
+          <strong>Kontakt:</strong> diakovo@futnet.sk
+        </div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">TJ Martin</h3>
+        <div class="club-location">📍 Martin</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1965<br>
+          <strong>Tréner:</strong> Vladimír Minárik<br>
+          <strong>Kontakt:</strong> martin@futnet.sk
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="region-section">
+    <h2 class="region-title">⛰️ Prešovský kraj</h2>
+    <div class="clubs-grid">
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">Tatran Prešov</h3>
+        <div class="club-location">📍 Prešov</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1952<br>
+          <strong>Tréner:</strong> Igor Procházka<br>
+          <strong>Kontakt:</strong> presov@futnet.sk
+        </div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">NK Bardejov</h3>
+        <div class="club-location">📍 Bardejov</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1970<br>
+          <strong>Tréner:</strong> Ľubomír Lukáč<br>
+          <strong>Kontakt:</strong> bardejov@futnet.sk
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="region-section">
+    <h2 class="region-title">🏛️ Košický kraj</h2>
+    <div class="clubs-grid">
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">Slávia Košice</h3>
+        <div class="club-location">📍 Košice</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1948<br>
+          <strong>Tréner:</strong> Miroslav Takáč<br>
+          <strong>Kontakt:</strong> slavia@futnet.sk
+        </div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-logo">🏐</div>
+        <h3 class="club-name">FK Moldava</h3>
+        <div class="club-location">📍 Moldava nad Bodvou</div>
+        <div class="club-info">
+          <strong>Založený:</strong> 1975<br>
+          <strong>Tréner:</strong> Ján Szabó<br>
+          <strong>Kontakt:</strong> moldava@futnet.sk
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: var(--bg-secondary); padding: 30px; border-radius: 12px; margin-top: 40px;">
+    <h3 style="margin-bottom: 15px; color: var(--primary);">💡 Chcete zaregistrovať nový klub?</h3>
+    <p style="margin-bottom: 15px;">
+      Ak máte záujem o založenie nového nohejbalového klubu alebo registráciu existujúceho 
+      klubu do Slovenskej asociácie nohejbalu, kontaktujte nás.
+    </p>
+    <a href="/o-nas/kontakt" style="display: inline-block; padding: 12px 24px; background: var(--primary); color: white; border-radius: 6px; font-weight: 500;">
+      Kontaktujte nás
+    </a>
+  </div>
+</Layout>
